@@ -1,0 +1,98 @@
+.recsenha {
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #3CB371
+}
+
+.card {
+    width: 450px;
+    height: 600px;
+    -webkit-box-shadow: 11px 10px 3px 0px rgba(0, 155, 0, 0.7);
+    -moz-box-shadow:    11px 10px 3px 0px rgba(0, 155, 0, 0.7);
+    box-shadow:         11px 10px 3px 0px rgba(0, 155, 0, 0.7);
+}
+
+.recsenha__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recsenha__h1 {
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.5);
+    width: 105%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    color: #3CB371;
+    font-weight: 300;
+}
+
+.form-group {
+    width: 80%;
+    position: relative;
+}
+
+.form-group label {
+    margin-left: 0px;
+    color: #3CB371;
+    font-weight: 300;
+}
+
+.form-control {
+    border-radius: 1.25rem;
+}
+
+.recsenha__icon--1 {
+    width: 20px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.recsenha__icon--3 {
+    width: 160px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    top: -80px;
+    position: absolute;
+}
+
+.recsenha__link {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 240px;
+    display: flex;
+    justify-content: center;
+}
+
+.recsenha__link a:hover {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+#card {
+    border-radius: 30px;
+}
+
+#recsenha__btn {
+    margin-top: 15px;
+    width: 80%;
+    background-color: #3CB371;
+    border-color: #3CB371;
+    border-radius: 30px;
+    font-weight: 300;
+}
+
+#recsenha__btn:hover {
+    background-color: #2E8B57;
+    border-color: #2E8B57;
+}
+
+#email {
+    border-radius: 30px;
+}

@@ -1,0 +1,114 @@
+.login {
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #3CB371
+}
+
+.card {
+    width: 450px;
+    height: 600px;
+    -webkit-box-shadow: 11px 10px 3px 0px rgba(0, 155, 0, 0.7);
+    -moz-box-shadow:    11px 10px 3px 0px rgba(0, 155, 0, 0.7);
+    box-shadow:         11px 10px 3px 0px rgba(0, 155, 0, 0.7);
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__h1 {
+    text-align: center;
+    margin-top: 200px;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.5);
+    margin-bottom: 35px;
+    color: #3CB371;
+    font-weight: 300;
+}
+
+.form-group {
+    width: 80%;
+    position: relative;
+}
+
+.form-group label {
+    margin-left: 0px;
+    color: #3CB371;
+    font-weight: 300;
+}
+
+.form-control {
+    border-radius: 1.25rem;
+}
+
+.login__icon--1 {
+    width: 20px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.login__icon--2 {
+    width: 20px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.login__icon--3 {
+    width: 160px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 20px;
+    top: -80px;
+    position: absolute;
+}
+
+.login__checkbox {
+    width: 100%;
+    margin-left: 100px;
+}
+
+.login__checkbox label {
+    margin-left: 5px;
+}
+
+.login__link {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login__link a:hover {
+    text-decoration: none;
+}
+
+#card {
+    border-radius: 30px;
+}
+
+#login__btn {
+    margin-top: 15px;
+    width: 80%;
+    background-color: #3CB371;
+    border-color: #3CB371;
+    border-radius: 30px;
+    font-weight: 300;
+}
+
+#login__btn:hover {
+    background-color: #2E8B57;
+    border-color: #2E8B57;
+}
+
+#email {
+    border-radius: 30px;
+}
+
+#password {
+    border-radius: 30px;
+}
