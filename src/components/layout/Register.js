@@ -1,18 +1,20 @@
 import React from 'react'
+import { useState } from 'react'
 import './Register.css'
 import IcoName from '../../assets/images/iconame.svg'
 import IcoEmail from '../../assets/images/icoemail.svg'
 import IcoKey from '../../assets/images/key.svg'
 import IcoReg from '../../assets/images/registerico.svg'
-import { useState } from 'react'
+import { URL_API } from '../../config/constants'
+import axios from 'axios'
 
 export default (props) => {
 
     const [data, setData] = useState({
-        nome: '',
+        username: '',
         email: '',
-        senha: '',
-        confSenha: ''
+        password: '',
+        confpassword: ''
     })
 
     const onChange = e => {
@@ -24,6 +26,17 @@ export default (props) => {
         console.log(data)
     }
 
+    const saveUser = async (e) => {
+        e.preventDefault()
+        try {
+            await axios.post(URL_API + '/users', data)
+            alert('Cadastro concluído com sucesso!')
+        } catch (error) {
+            alert('Não foi possivel cadastrar o usuário.')
+            console.log(error)
+        }
+    }
+
     const goBack = e => {
         e.preventDefault()
         props.setTela(1)
@@ -32,14 +45,14 @@ export default (props) => {
     return (
         <>
             <div className = 'register'>
-                <div id = 'card' className = 'card'>
+                <div id = 'card__register' className = 'card'>
 
-                    <form className='register__form' action="">
+                    <form className='register__form' onSubmit={saveUser}>
                         <img className = 'register__icon--3' src={IcoReg} alt="icon_up"/>
                         <h1 className = 'register__h1'>Registre-se</h1>
                         <div className="form-group">
-                            <label htmlFor="nameuser">Nome</label>
-                            <input onChange={onChange} value={data.nome} name="nome" type="text" className="form-control" id="nameuser" placeholder='ex: Filipe Eduardo'/>
+                            <label htmlFor="username">Nome</label>
+                            <input onChange={onChange} value={data.username} name="username" type="text" className="form-control" id="username" placeholder='ex: Filipe Eduardo'/>
                             <img className = 'register__icon--1' src={IcoName} alt='icon'/>
                         </div>
                         <div className="form-group">
@@ -49,12 +62,12 @@ export default (props) => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Senha</label>
-                            <input onChange={onChange} value={data.senha} name="senha" type="password" className="form-control" id="password"/>
+                            <input onChange={onChange} value={data.password} name="password" type="password" className="form-control" id="password"/>
                             <img className = 'register__icon--2' src={IcoKey} alt='icon'/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="confirmpassword">Confirmar Senha</label>
-                            <input onChange={onChange} value={data.confSenha} name="confSenha" type="password" className="form-control" id="confirmpassword"/>
+                            <label htmlFor="confpassword">Confirmar Senha</label>
+                            <input onChange={onChange} value={data.confpassword} name="confpassword" type="password" className="form-control" id="confpassword"/>
                             <img className = 'register__icon--2' src={IcoKey} alt='icon'/>
                         </div>
                         <button id='register__btn' className = 'btn btn-primary' type='submit'>Registrar</button>

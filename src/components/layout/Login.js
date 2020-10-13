@@ -1,16 +1,18 @@
 import React from 'react'
+import { useState } from 'react'
 import './Login.css'
 import IcoEmail from '../../assets/images/icoemail.svg'
 import IcoKey from '../../assets/images/key.svg'
 import IcoUser from '../../assets/images/user.svg'
-import { useState } from 'react'
+import axios from 'axios'
+import { URL_API } from '../../config/constants'
 
 export default (props) => {
 
     const [data, setData] = useState({
-        email: '',
-        senha: '',
-        saveuser: false
+        email: localStorage.getItem('userEmail') || '',
+        password: '',
+        saveuser: localStorage.getItem('userEmail') ? true : false
     })
 
     const onChange = e => {
@@ -32,9 +34,21 @@ export default (props) => {
         console.log(data)
     }
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        props.logar(true)
+        try {
+            if (data.saveuser) {
+                localStorage.setItem('userEmail', data.email)
+            } else {
+                localStorage.removeItem('userEmail')
+            }
+            const resp = await axios.post(URL_API + '/auth/login', data)
+            localStorage.setItem('userToken', resp.data.token)
+            props.logar(true)
+        } catch (error) {
+            alert('Login não pode ser efetuado.')
+            console.log(error)
+        }
     }
 
     const goRegister = e => {
@@ -50,7 +64,7 @@ export default (props) => {
     return (
         <>
             <div className = 'login'>
-                <div id = 'card' className = 'card'>
+                <div id = 'card__login' className = 'card'>
 
                     <form className='login__form' onSubmit={handleSubmit}>
                         <img className = 'login__icon--3' src={IcoUser} alt='icon_up'/>
@@ -62,7 +76,7 @@ export default (props) => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input onChange={onChange} value={data.senha} name="senha" type="password" className="form-control" id="password"/>
+                            <input onChange={onChange} value={data.password} name="password" type="password" className="form-control" id="password"/>
                             <img className = 'login__icon--2' src={IcoKey} alt='icon'/>
                         </div>
                         <div className="login__checkbox">

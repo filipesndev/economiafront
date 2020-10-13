@@ -17,16 +17,30 @@ export default (props) => {
                 <img src={Logo} alt="logo"/>
             </div>
 
-            <div className = 'header__nav'>
-                <nav>
-                    <ul>
-                        <a href="/#" onClick={ e => props.setOpMenu(1)}><li>Cadastros</li></a>
-                        <a href="/#" onClick={ e => props.setOpMenu(2)}><li>Lançamentos</li></a>
-                        <a href="/#" onClick={ e => props.setOpMenu(3)}><li>Resultados</li></a>
-                        <a href="/#" onClick={ e => props.setOpMenu(4)}><li>Configurações</li></a>
-                    </ul>
-                </nav>
-            </div>
+            <nav className = 'header__nav'>
+                <ul className='header__menu'>
+
+                    <li className='header__menu-item header__submenu'>
+                        <a href="/#">Cadastros</a>
+                        <ul>
+                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(1)} href="/#">Tipos de pagamento</a></li>
+                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(2)} href="/#">Grupos</a></li>
+                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(3)} href="/#">Usuários</a></li>
+                        </ul>
+                    </li>
+
+                    <li className='header__menu-item header__submenu'>
+                        <a href="/#">Lançamentos</a>
+                        <ul>
+                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(4)} href="/#">Tipos de pagamento</a></li>
+                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(4)} href="/#">Grupos</a></li>
+                        </ul>
+                    </li>
+
+                    <li className='header__menu-item'><a href="/#" onClick={ e => props.setOpMenu(5)}>Resultados</a></li>
+                    <li className='header__menu-item'><a href="/#" onClick={ e => props.setOpMenu(6)}>Configurações</a></li>
+                </ul>
+            </nav>
 
             <div className = 'header__user'>
                 <span>
@@ -36,6 +50,7 @@ export default (props) => {
                     </a>
                 </span>
             </div>
+
         </header>
     )
 }

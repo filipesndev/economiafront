@@ -4,10 +4,6 @@
     background-color: #3CB371;
     display: flex;
     justify-content: space-between;
-    
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.34);
-    -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.34);
-    box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.34);
 }
 
 .header__logo {
@@ -24,23 +20,27 @@
 
 .header__nav {
     width: 60%;
-}
-
-.header__nav nav{
     height: 100%;
 }
 
-.header__nav ul{
+.header__menu{
     list-style: none;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 100px;
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    padding-inline-start: 0px;
 }
 
-.header__nav a {
+.header__menu-item {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.header__menu-item > a {
     color: white;
     padding: 10px 30px;
     border-radius: 10px;
@@ -48,20 +48,54 @@
     transition: all 0.8s;
     display: flex;
     align-items: center;
-    margin: 20px 10px;
 }
 
-.header__nav a:hover {
+.header__menu-item > a:hover {
     text-decoration: none;
     color: white;
     background-color: #2E8B57;
     transition: all 0.8s;
 }
 
-.header__nav li{
-    font-size: 18px;
-    font-weight: 300;
-    text-align: justify;
+.header__submenu {
+    position: relative;
+    white-space: nowrap;
+}
+
+.header__submenu > ul {
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: #59CC82;
+    color: black;
+    list-style: none;
+    padding: 5px;
+    -webkit-box-shadow: 2px 4px 7px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    2px 4px 7px 0px rgba(50, 50, 50, 0.54);
+    box-shadow:         2px 4px 7px 0px rgba(50, 50, 50, 0.54);
+}
+
+.header__submenu:hover > ul {
+    display: block;
+}
+
+.header__submenu-item {
+    padding: 5px;
+}
+
+.header__submenu-item > a {
+    color: white;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    padding: 10px 15px;
+}
+
+.header__submenu-item > a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #2E8B57;
+    transition: all 0.8s;
 }
 
 .header__user {

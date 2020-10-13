@@ -23,7 +23,7 @@ export default (props) => {
     return (
         <>
             <div className = 'novasenha'>
-                <div id = 'card' className = 'card'>
+                <div id = 'card__novasenha' className = 'card'>
 
                     <form className='novasenha__form'>
                         <img className = 'novasenha__icon--3' src={IcoKeyBall} alt='icon_up'/>

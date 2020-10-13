@@ -22,7 +22,7 @@ export default (props) => {
     return (
         <>
             <div className = 'recsenha'>
-                <div id = 'card' className = 'card'>
+                <div id = 'card__recsenha' className = 'card'>
 
                     <form className='recsenha__form' action="">
                         <img className = 'recsenha__icon--3' src={IcoLock} alt="icon_up"/>

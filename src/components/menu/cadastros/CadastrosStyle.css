@@ -1,0 +1,44 @@
+.btn_position {
+    width: 100%;
+    position: relative;
+}
+
+.btn-add {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
+
+.icon__check {
+    color: #3CB371;
+}
+
+.cadastro, th, td {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.cadastro__tr {
+    background-color:  #ecf0f1;
+} 
+
+.btn__action--edit {
+    margin-right: 10px;
+}
+
+.btn__action--del {
+    margin-left: 10px;
+}
+
+#cadastro__table {
+    border-radius: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#cadastro__head{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    color: whitesmoke;
+}

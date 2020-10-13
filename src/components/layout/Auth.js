@@ -1,6 +1,5 @@
 import React from 'react'
 import Login from './Login'
-import NovaSenha from './NovaSenha'
 import Register from './Register'
 import RecSenha from './RecSenha'
 import { useState } from 'react'
