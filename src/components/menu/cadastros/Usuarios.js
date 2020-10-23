@@ -63,35 +63,37 @@ export default (props) => {
             {
                 showModal ? <Adicionar userId={userId} fechar={reloadUsers}/> : null
             }
-            <table id='cadastro__table' className='cadastro table'>
-                <thead id='cadastro__head' className='thead-dark'>
-                    <tr>
-                        <th className='cadastro__th'>ID</th>
-                        <th className='cadastro__th'>Nome</th>
-                        <th className='cadastro__th'>Email</th>
-                        <th className='cadastro__th'>Admin</th>
-                        <th className='cadastro__th'>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        list.map((user) => {
-                            return (
-                                <tr key={user.id}>
-                                    <td className='cadastro__tr'>{user.id}</td>
-                                    <td className='cadastro__tr'>{user.username}</td>
-                                    <td className='cadastro__tr'>{user.email}</td>
-                                    <td className='cadastro__tr'>{ (!!user.admin && <i className='fas fa-check fa-lg icon__check'></i>) }</td>
-                                    <td className='cadastro__tr'>
-                                        <button className='btn btn-primary btn__action--edit' onClick={ (e) => {editarUsuario(user.id)} }><i className="fas fa-pencil-alt"></i></button>
-                                        <button className='btn btn-danger btn__action--del' onClick={ (e) => {apagarUsuario(user.id)} }><i className="fas fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+            <div className='table_position'>
+                <table id='cadastro__table' className='cadastro table'>
+                    <thead id='cadastro__head' className='thead-dark'>
+                        <tr>
+                            <th className='cadastro__th'>ID</th>
+                            <th className='cadastro__th'>Nome</th>
+                            <th className='cadastro__th'>Email</th>
+                            <th className='cadastro__th'>Admin</th>
+                            <th className='cadastro__th'>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            list.map((user) => {
+                                return (
+                                    <tr key={user.id}>
+                                        <td className='cadastro__tr'>{user.id}</td>
+                                        <td className='cadastro__tr'>{user.username}</td>
+                                        <td className='cadastro__tr'>{user.email}</td>
+                                        <td className='cadastro__tr'>{ (!!user.admin && <i className='fas fa-check fa-lg icon__check'></i>) }</td>
+                                        <td className='cadastro__tr'>
+                                            <button className='btn btn-primary btn__action--edit' onClick={ (e) => {editarUsuario(user.id)} }><i className="fas fa-pencil-alt"></i></button>
+                                            <button className='btn btn-danger btn__action--del' onClick={ (e) => {apagarUsuario(user.id)} }><i className="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

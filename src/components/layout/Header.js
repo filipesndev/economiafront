@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import Logo from '../../assets/images/logo.jpg' 
+import Logo from '../../assets/images/Logo.png' 
 import User from '../../assets/images/user.jpg' 
 
 export default (props) => {
@@ -29,16 +29,19 @@ export default (props) => {
                         </ul>
                     </li>
 
-                    <li className='header__menu-item header__submenu'>
-                        <a href="/#">Lançamentos</a>
-                        <ul>
-                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(4)} href="/#">Tipos de pagamento</a></li>
-                            <li className='header__submenu-item' ><a onClick={ e => props.setOpMenu(4)} href="/#">Grupos</a></li>
-                        </ul>
+                    <li className='header__menu-item'>
+                        <a href="/#" onClick={ e => props.setOpMenu(4)}>Lançamentos</a>
                     </li>
 
-                    <li className='header__menu-item'><a href="/#" onClick={ e => props.setOpMenu(5)}>Resultados</a></li>
-                    <li className='header__menu-item'><a href="/#" onClick={ e => props.setOpMenu(6)}>Configurações</a></li>
+                    <li className='header__menu-item'>
+                        <a href="/#" onClick={ e => props.setOpMenu(5)}>Resultados</a>
+                    
+                    </li>
+
+                    <li className='header__menu-item'>
+                        <a href="/#" onClick={ e => props.setOpMenu(6)}>Configurações</a>
+                    </li>
+
                 </ul>
             </nav>
 

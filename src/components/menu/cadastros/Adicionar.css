@@ -32,7 +32,7 @@
     background-color: #636e72;
 }
 
-.cardadd__head h1 {
+.cardadd__head > h1 {
     font-size: 20px;
     font-weight: 300;
     margin-left: 10px;
@@ -40,7 +40,7 @@
     color: white;
 }
 
-.cardadd__head button {
+.cardadd__head > button {
     margin-right: 10px;
     color: white;
 }

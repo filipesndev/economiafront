@@ -34,7 +34,7 @@
     position: relative;
 }
 
-.form-group label {
+.login__form > .form-group > label {
     margin-left: 0px;
     color: #3CB371;
     font-weight: 300;

@@ -1,0 +1,46 @@
+.top_cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: white;
+    padding: 0px 20px;
+}
+
+.top_card {
+    background-color: #343a40;
+    width: 250px;
+    height: 130px;
+    padding: 20px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.6);
+    -moz-box-shadow:    4px 4px 10px 0px rgba(50, 50, 50, 0.6);
+    box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.6);
+}
+
+.top_card h1 {
+    font-size: 25px;
+}
+
+.top_card p {
+    text-align: center;
+    font-size: 35px;
+}
+
+.date_picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.saldo_positivo {
+    color: 	#00BFFF;
+}
+
+.saldo_negativo {
+    color: 	#eb3b5a;
+}

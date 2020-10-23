@@ -62,33 +62,35 @@ export default (props) => {
             {
                 showModal ? <AdicionarTipo fechar={closeModal} typeId={typeId} /> : null
             }
-            <table id='cadastro__table' className='table'>
-                <thead id='cadastro__head' className='thead-dark'>
-                    <tr>
-                        <th className='cadastro__th'>ID</th>
-                        <th className='cadastro__th'>Descrição</th>
-                        <th className='cadastro__th'>Sigla</th>
-                        <th className='cadastro__th'>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        types.map( (tipo) => {
-                            return (
-                                <tr key={tipo.id}>
-                                    <td className='cadastro__tr'>{tipo.id}</td>
-                                    <td className='cadastro__tr'>{tipo.descricao}</td>
-                                    <td className='cadastro__tr'>{tipo.sigla}</td>
-                                    <td className='cadastro__tr'>
-                                        <button className='btn btn-primary btn__action--edit' onClick={ (e) => {editType(tipo.id)} }><i className="fas fa-pencil-alt"></i></button>
-                                        <button className='btn btn-danger btn__action--del' onClick={ (e) => {apagarTipo(tipo.id)} }><i className="fas fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+            <div className='table_position'>
+                <table id='cadastro__table' className='table'>
+                    <thead id='cadastro__head' className='thead-dark'>
+                        <tr>
+                            <th className='cadastro__th'>ID</th>
+                            <th className='cadastro__th'>Descrição</th>
+                            <th className='cadastro__th'>Sigla</th>
+                            <th className='cadastro__th'>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            types.map( (tipo) => {
+                                return (
+                                    <tr key={tipo.id}>
+                                        <td className='cadastro__tr'>{tipo.id}</td>
+                                        <td className='cadastro__tr'>{tipo.descricao}</td>
+                                        <td className='cadastro__tr'>{tipo.sigla}</td>
+                                        <td className='cadastro__tr'>
+                                            <button className='btn btn-primary btn__action--edit' onClick={ (e) => {editType(tipo.id)} }><i className="fas fa-pencil-alt"></i></button>
+                                            <button className='btn btn-danger btn__action--del' onClick={ (e) => {apagarTipo(tipo.id)} }><i className="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

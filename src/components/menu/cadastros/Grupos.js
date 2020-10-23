@@ -62,31 +62,33 @@ export default (props) => {
             {
                 showModal ? <AdicionarGrupos fechar={closeModal} groupId={groupId} /> : null
             }
-            <table id='cadastro__table' className='table'>
-                <thead id='cadastro__head' className='thead-dark'>
-                    <tr>
-                        <th className='cadastro__th'>ID</th>
-                        <th className='cadastro__th'>Descrição</th>
-                        <th className='cadastro__th'>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        list.map( (grupo) => {
-                            return (
-                                <tr key={grupo.id}>
-                                    <td className='cadastro__tr'>{grupo.id}</td>
-                                    <td className='cadastro__tr'>{grupo.descricao}</td>
-                                    <td className='cadastro__tr'>
-                                        <button className='btn btn-primary btn__action--edit' onClick={ (e) => editGroup(grupo.id) }><i className="fas fa-pencil-alt"></i></button>
-                                        <button className='btn btn-danger btn__action--del' onClick={ (e) => delGroup(grupo.id) } ><i className="fas fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                            )
-                        } )
-                    }
-                </tbody>
-            </table>
+            <div className='table_position'>
+                <table id='cadastro__table' className='table'>
+                    <thead id='cadastro__head' className='thead-dark'>
+                        <tr>
+                            <th className='cadastro__th'>ID</th>
+                            <th className='cadastro__th'>Descrição</th>
+                            <th className='cadastro__th'>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            list.map( (grupo) => {
+                                return (
+                                    <tr key={grupo.id}>
+                                        <td className='cadastro__tr'>{grupo.id}</td>
+                                        <td className='cadastro__tr'>{grupo.descricao}</td>
+                                        <td className='cadastro__tr'>
+                                            <button className='btn btn-primary btn__action--edit' onClick={ (e) => editGroup(grupo.id) }><i className="fas fa-pencil-alt"></i></button>
+                                            <button className='btn btn-danger btn__action--del' onClick={ (e) => delGroup(grupo.id) } ><i className="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                )
+                            } )
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

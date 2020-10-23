@@ -1,0 +1,70 @@
+.modal-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-lancamento {
+    border: #636e72 2px solid;
+    border-radius: 2px;
+    width: 800px;
+    background-color: whitesmoke;
+}
+
+.card-lancamento_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #636e72;
+}
+
+.card-lancamento_head > h1 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+.card-lancamento_head > button {
+    margin-right: 10px;
+    color: white;
+}
+
+.formrow1, 
+.formrow2, 
+.formrow3, 
+.formrow4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.formrow1 > .form-group, 
+.formrow2 > .form-group, 
+.formrow3 > .form-group, 
+.formrow4 > .form-group {
+    margin: 10px 25px;
+}
+
+.formrow1 > .form-group > label, 
+.formrow2 > .form-group > label, 
+.formrow3 > .form-group > label, 
+.formrow4 > .form-group > label {
+    margin-right: 10px;
+}
+
+.formrow5 {
+    position: relative;
+    margin-top: 50px;
+}
+                        
+#text-historico {
+    width: 100%;
+}
