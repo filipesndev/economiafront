@@ -5,13 +5,21 @@ import { useState } from 'react'
 
 export default (props) => {
 
-    const [show, setShow] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+
+    const addLancamento = (e) => {
+        setShowModal(true)
+    }
+
+    const closeModal = (e) => {
+        setShowModal(false)
+    }
 
     return (
         <div className='table_container'>
-            <button className='btn btn-success'><i class="fas fa-plus"></i>Novo Lançamento</button>
+            <button className='btn btn-success' onClick={ addLancamento }><i className="fas fa-plus"></i>Novo Lançamento</button>
             {
-                <AdicionarLancamento/>
+                showModal ? <AdicionarLancamento fechar={ closeModal } /> : null
             }
             <div className='table_itens'>
                 <table id='table_lancamentos' className='table'>
@@ -39,7 +47,7 @@ export default (props) => {
                             <td className='table_options'>
                                 <button className='btn btn-primary btn-table-option'><i className="fas fa-pencil-alt"></i></button>
                                 <button className='btn btn-danger btn-table-option'><i className="fas fa-trash-alt"></i></button>
-                                <button className='btn btn-warning btn-table-option'><i class="far fa-eye"></i></button>
+                                <button className='btn btn-warning btn-table-option'><i className="far fa-eye"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -53,7 +61,7 @@ export default (props) => {
                             <td className='table_options'>
                                 <button className='btn btn-primary btn-table-option'><i className="fas fa-pencil-alt"></i></button>
                                 <button className='btn btn-danger btn-table-option'><i className="fas fa-trash-alt"></i></button>
-                                <button className='btn btn-warning btn-table-option'><i class="far fa-eye"></i></button>
+                                <button className='btn btn-warning btn-table-option'><i className="far fa-eye"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -67,7 +75,7 @@ export default (props) => {
                             <td className='table_options'>
                                 <button className='btn btn-primary btn-table-option'><i className="fas fa-pencil-alt"></i></button>
                                 <button className='btn btn-danger btn-table-option'><i className="fas fa-trash-alt"></i></button>
-                                <button className='btn btn-warning btn-table-option'><i class="far fa-eye"></i></button>
+                                <button className='btn btn-warning btn-table-option'><i className="far fa-eye"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -81,7 +89,7 @@ export default (props) => {
                             <td className='table_options'>
                                 <button className='btn btn-primary btn-table-option'><i className="fas fa-pencil-alt"></i></button>
                                 <button className='btn btn-danger btn-table-option'><i className="fas fa-trash-alt"></i></button>
-                                <button className='btn btn-warning btn-table-option'><i class="far fa-eye"></i></button>
+                                <button className='btn btn-warning btn-table-option'><i className="far fa-eye"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -95,7 +103,7 @@ export default (props) => {
                             <td className='table_options'>
                                 <button className='btn btn-primary btn-table-option'><i className="fas fa-pencil-alt"></i></button>
                                 <button className='btn btn-danger btn-table-option'><i className="fas fa-trash-alt"></i></button>
-                                <button className='btn btn-warning btn-table-option'><i class="far fa-eye"></i></button>
+                                <button className='btn btn-warning btn-table-option'><i className="far fa-eye"></i></button>
                             </td>
                         </tr>
                         <tr>
@@ -109,7 +117,7 @@ export default (props) => {
                             <td className='table_options'>
                                 <button className='btn btn-primary btn-table-option'><i className="fas fa-pencil-alt"></i></button>
                                 <button className='btn btn-danger btn-table-option'><i className="fas fa-trash-alt"></i></button>
-                                <button className='btn btn-warning btn-table-option'><i class="far fa-eye"></i></button>
+                                <button className='btn btn-warning btn-table-option'><i className="far fa-eye"></i></button>
                             </td>
                         </tr>
                     </tbody>

@@ -13,9 +13,9 @@ export default (props) => {
             <div className='bottom'>
                 <Bottom/>
                 <div className='bottom_options'>
-                    <button className='btn-option'><i class="fas fa-table"></i>Exportar para Exel</button>
-                    <button className='btn-option'><i class="fas fa-file"></i>Gerar relatório</button>
-                    <button className='btn-option'><i class="fas fa-chart-line"></i>Visualizar gráficos</button>
+                    <button className='btn-option'><i className="fas fa-table"></i>Exportar para Exel</button>
+                    <button className='btn-option'><i className="fas fa-file"></i>Gerar relatório</button>
+                    <button className='btn-option'><i className="fas fa-chart-line"></i>Visualizar gráficos</button>
                 </div>
             </div>
         </>
